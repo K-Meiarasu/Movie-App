@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+    font-size: 1.5vw;
+    color: blanchedalmond;
+}
+.main{
+    display: grid;
+    align-content: center;
+    color: tomato;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+}
+.box{
+    display: grid;
+    border-radius: 0.5vw;
+    margin: 0.5vw;
+    align-content: center;
+    background-color: rgb(36, 36, 36);
+    box-shadow: 0 0.25vw 0.25vw 0 goldenrod;
+    border: 1px solid gold;
+    width: auto;
+    height: 32vw;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: gold;
+    box-shadow: 0 0.25vw 0.25vw 0 rgb(255, 225, 148);
+    border: 1px solid rgb(36, 36, 36);
+}
+.box:hover p{
+    color: black;
+}
+img{
+    margin: 6%;
+    width: 20vw;
+    height: 15vw;
+}
+.filter{
+    text-align: center;
+    color: gray;
+    font-size: 2vw;
+}
+input{
+    margin-top: 1vw;
+    height: 2.5vh;
+    width: 15vw;
+    padding: 1%;
+    font-size: 0.9vw;
+    border-radius: 0.5vw;
+}
+p{
+    text-align: center;
+    font-size: 1.5vw;
+    color: white;
+}
+#footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="filter">
+            <input list="languages" [(ngModel)]="languages" (change)="lang()" placeholder="Select Language">
+            <datalist id="languages">
+                <option value="English">
+                <option value="Hindi">
+                <option value="Tamil">
+                <option value="Telugu">
+            </datalist>
+        </div>
+        <hr>
+        <div class="main">
+            <div class="box" *ngFor="let mov of array" (click)="select(mov.id)" [routerLink]="['/movie',mov.id]">
+                <p style="font-weight: bold;">{{mov.title}}</p>
+                <img src="http://image.tmdb.org/t/p/w500{{mov.poster_path}}">
+                <p>Released on, {{mov.release_date}}</p>
+                <div id="footer">
+                    <p><i class="fas fa-theater-masks" style="color: blue;"></i> {{mov.popularity}}</p>
+                    <p><i class="fas fa-heartbeat" style="color: red;"></i> {{mov.vote_count}}</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

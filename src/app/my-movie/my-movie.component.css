@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+    justify-content: center;
+}
+h1{
+    color: red;
+}
+#cast{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#each{
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    padding: 4%;
+}
+#overview{
+    color: white;
+    margin: 2% 10% 2% 10%;
+    text-align: center;
+}
+img{
+    width: 10vw;
+    height: 9vw;
+    border-radius: 0.6vw;
+}
+img:hover{
+    box-shadow: 0 1vw 1vw 1vw black;
+}
+hr{
+    width: 25%;
+}

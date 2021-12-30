@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <h1>{{about.original_title}}</h1>
+        <hr>
+        <div>
+            <iframe [src]='link|convert' frameborder=0 allowfullscreen width="1090" height="600"></iframe>
+        </div>
+        <br><hr>
+        <h1>Plot :</h1>
+        <h2 style="width: 25%; margin-left: 38%;">{{about.overview}}</h2>
+        <br><hr>
+        <h1>Genre :</h1>
+        <div>
+            <h3  *ngFor="let d of about.genres">{{d.name}}</h3>
+        </div>
+        <br><hr>
+        <h1>Cast & Crew</h1>
+        <div id="cast">
+            <div *ngFor="let c of cc" id="each">
+                <img src="http://image.tmdb.org/t/p/w500{{c.profile_path}}"><br>
+                {{c.name}}
+            </div>
+        </div>
+    </body>
+</html>
