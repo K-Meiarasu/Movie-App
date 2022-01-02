@@ -16,6 +16,8 @@ export class CinemaService {
 
   id:number=0;
 
+  value=false
+
   constructor(private http:HttpClient) { }
 
   getMovies(){
@@ -54,5 +56,24 @@ export class CinemaService {
 
   getDetails(){
     return this.http.get(this.movie+this.id+this.api_key+'append_to_response=credits');
+  }
+
+  auth(value:any)
+  {
+    this.value=value;
+  }
+  
+  getusers()
+  {
+    return this.http.get('http://localhost:3000/User');
+  }
+
+  login()
+  {
+    if(this.value)
+    {
+      return true;
+    }
+    return false;
   }
 }
